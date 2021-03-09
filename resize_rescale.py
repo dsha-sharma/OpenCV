@@ -1,6 +1,6 @@
 import cv2 as cv
 
-def rescaleFrame(frame, scale):
+def rescaleFrame(frame, scale = 0.5):
 	width = int(frame.shape[1] * scale)
 	height = int(frame.shape[0] * scale)
 	dimensions = (width, height)
@@ -21,4 +21,6 @@ def rescaleFrame(frame, scale):
 # cv.destroyAllWindows()
 
 #rescale images
-image = cv.imread('i.jpg')
+image = cv.imread('1.jpg')
+resized_image = rescaleFrame(image)
+cv.imshow("Resized Image",resized_image)
