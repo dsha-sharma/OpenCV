@@ -8,14 +8,17 @@ def rescaleFrame(frame, scale):
 	return cv.resize(frame, dimensions, interpolation = cv.INTER_AREA)
 
 #rescale video
-capture = cv.VideoCapture("2.mp4")
-while True:
-	isTrue, frame = capture.read()
-	frame_resized = rescaleFrame(frame, scale=0.5)
-	cv.imshow("Video Resized",frame_resized)
+# capture = cv.VideoCapture("2.mp4")
+# while True:
+# 	isTrue, frame = capture.read()
+# 	frame_resized = rescaleFrame(frame, scale=0.5)
+# 	cv.imshow("Video Resized",frame_resized)
 
-	if cv.waitKey(20) & 0xFF==ord('d'):
-		break
+# 	if cv.waitKey(20) & 0xFF==ord('d'):
+# 		break
 
-capture.release()
-cv.destroyAllWindows()
+# capture.release()
+# cv.destroyAllWindows()
+
+#rescale images
+image = cv.imread('i.jpg')
